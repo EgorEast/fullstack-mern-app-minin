@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-mern-app-minin",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EgorEast/fullstack-mern-app-minin.git"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Egor Slobodskoy <egoreast.true@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EgorEast/fullstack-mern-app-minin/issues"
+  },
+  "homepage": "https://github.com/EgorEast/fullstack-mern-app-minin#readme"
+}
