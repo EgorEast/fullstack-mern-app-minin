@@ -32,7 +32,7 @@ export const useHttp = () => {
 		[]
 	);
 
-	const clearError = () => setsError(null);
+	const clearError = useCallback(() => setsError(null), []);
 
 	return { loading, request, error, clearError };
 };
