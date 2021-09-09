@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useHttp } from '../hooks/http.hook';
 
 export const AuthPage = () => {
+	const { loading, request } = useHttp();
 	const [form, setForm] = useState({
 		email: '',
 		password: '',
@@ -8,6 +10,14 @@ export const AuthPage = () => {
 
 	const changeHandler = (event) => {
 		setForm({ ...form, [event.target.name]: event.target.value });
+	};
+
+	const registerHandler = async () => {
+		try {
+			const data = await request('/api/auth/register', 'POST', { ...form });
+			console.log('Data ', data);
+			// eslint-disable-next-line no-empty
+		} catch (e) {}
 	};
 
 	return (
@@ -46,10 +56,15 @@ export const AuthPage = () => {
 						<button
 							className='btn  brown lighten-1'
 							style={{ marginRight: 10 }}
+							disabled={loading}
 						>
 							Войти
 						</button>
-						<button className='btn blue-grey lighten-2 black-text'>
+						<button
+							className='btn blue-grey lighten-2 black-text'
+							onClick={registerHandler}
+							disabled={loading}
+						>
 							Регистрация
 						</button>
 					</div>
