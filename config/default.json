@@ -1,5 +1,6 @@
 {
   "port": 5000,
   "jwtSecret": "egor fullstack mern",
-  "mongoUri": "mongodb+srv://egor:1234wert@cluster0.valuq.mongodb.net/app?retryWrites=true&w=majority"
+  "mongoUri": "mongodb+srv://egor:1234wert@cluster0.valuq.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
 }
