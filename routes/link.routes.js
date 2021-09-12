@@ -46,7 +46,7 @@ router.get('/', authMiddleware, async (req, res) => {
 
 router.get('/:id', authMiddleware, async (req, res) => {
 	try {
-		const link = await Link.findById(req.params.id); // ???
+		const link = await Link.findById(req.params.id);
 		res.json(link);
 	} catch (e) {
 		res.status(500).json({ message: 'Что-то пошло не так. Попробуйте снова' });
